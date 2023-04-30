@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#check-box-1:checked ~ .check-1 {
+  @apply text-opacity-100;
+}
+
+#check-box-2:checked ~ .check-2 {
+  @apply text-opacity-100;
+}
