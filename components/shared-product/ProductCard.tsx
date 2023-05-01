@@ -4,6 +4,7 @@ import { getImageUrl } from "@/api/directus";
 import { ProductCardInfo } from "./ProductCardInfo";
 import { AddToCartButton } from "../client/AddToCartButton";
 import { TProduct } from "@/types/product";
+import Image from "next/image";
 
 type ProductCardProps = {
   product: TProduct;
@@ -19,9 +20,11 @@ export const ProductCard: FC<ProductCardProps> = ({ product }) => {
         href={"/productos/" + product.slug}
         className="flex-grow flex flex-col mb-4"
       >
-        <img
+        <Image
           src={getImageUrl(product.image) + "?width=270&height=270"}
-          alt="img"
+          width={270}
+          height={270}
+          alt="product"
           className="object-cover w-full"
         />
         <ProductCardInfo product={product} />

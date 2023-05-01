@@ -1,4 +1,5 @@
 import { getCategories, getImageUrl } from "@/api/directus";
+import Image from "next/image";
 import Link from "next/link";
 
 export const ShopByCategory = async () => {
@@ -6,7 +7,7 @@ export const ShopByCategory = async () => {
   categories = categories.filter((c) => c.parent === null);
 
   return (
-    <div className="py-16 max-xl:px-4">
+    <div className="py-16">
       <h2 className="text-2xl font-roboto font-bold mb-7">
         COMPRA POR CATEGORÍA
       </h2>
@@ -18,10 +19,12 @@ export const ShopByCategory = async () => {
             href={"/categorias/" + category.slug}
             className="relative flex items-center justify-center aspect-[3/2]"
           >
-            <img
+            <Image
               src={getImageUrl(category.image) + "?width=380&height=250"}
-              alt="img"
+              alt="product"
               className="object-cover w-full h-full absolute"
+              width={380}
+              height={250}
             />
 
             <div className="relative py-4 px-2 xl:p-8 bg-white/40 hover:bg-white/60 transition">

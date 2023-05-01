@@ -1,12 +1,16 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export const Banner = async () => {
   return (
     <div className="relative">
       <div className="relative h-[430px]">
-        <img
+        <Image
           src="/images/banner-1.jpg"
           alt="banner-1"
+          height={430}
+          width={1920}
+          priority
           className="object-cover object-bottom w-full h-full"
         />
       </div>

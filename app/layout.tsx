@@ -7,7 +7,7 @@ import { UserMenu } from "@/components/layout/UserMenu";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { poppins, roboto } from "@/font";
 import clsx from "clsx";
-import "@/components/client/SwiperCore";
+import "@/components/client/swiper/SwiperCore";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
 
@@ -69,9 +69,11 @@ export default async function RootLayout({
             <main className="col-start-1 col-end-4 ">{children}</main>
 
             <div className="col-start-1 col-end-4">
-              <div className="xl:mx-container-side">
-                {/* @ts-expect-error Async Server Component */}
-                <Footer />
+              <div className="px-4">
+                <div className="max-w-container mx-auto">
+                  {/* @ts-expect-error Async Server Component */}
+                  <Footer />
+                </div>
               </div>
             </div>
 

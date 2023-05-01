@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const CustomerSupport = () => {
   return (
-    <div className="grid grid-cols-3 items-center justify-center py-16 gap-8">
+    <div className="grid grid-cols-1 lg:grid-cols-3 items-center justify-center py-16 gap-8">
       <div className="flex items-center justify-center border border-primary py-4 px-8 gap-6">
         <div>
           <Image

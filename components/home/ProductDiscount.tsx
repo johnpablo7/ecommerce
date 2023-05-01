@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const ProductDiscount = () => {
   return (
     <>
@@ -9,9 +11,7 @@ export const ProductDiscount = () => {
             <p>Attractive Natural Furniture</p>
             <button>Shop Now</button>
           </div>
-          <div>
-            <img src="" alt="img" />
-          </div>
+          <div>{/* <Image src="" alt="product" /> */}</div>
         </div>
         <div>Otro producto</div>
       </div>

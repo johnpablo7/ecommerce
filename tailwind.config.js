@@ -16,6 +16,9 @@ module.exports = {
       margin: {
         "container-side": "calc((100vw - 1200px)/2)",
       },
+      maxWidth: {
+        container: "1200px",
+      },
     },
     fontFamily: {
       roboto: ["var(--font-roboto)"],

@@ -11,18 +11,20 @@ export default function Home() {
     <div>
       {/* @ts-expect-error Async Server Component */}
       <Banner />
-      <div className="xl:mx-container-side">
-        <CustomerSupport />
-        <ProductDiscount />
+      <div className="px-4">
+        <div className="max-w-container mx-auto">
+          <CustomerSupport />
+          <ProductDiscount />
 
-        {/* @ts-expect-error Async Server Component */}
-        <ShopByCategory />
+          {/* @ts-expect-error Async Server Component */}
+          <ShopByCategory />
 
-        {/* @ts-expect-error Async Server Component */}
-        <NewProducts />
+          {/* @ts-expect-error Async Server Component */}
+          <NewProducts />
 
-        {/* <OnlineExclusive /> */}
-        {/* <RecomendedForYou /> */}
+          {/* <OnlineExclusive /> */}
+          {/* <RecomendedForYou /> */}
+        </div>
       </div>
     </div>
   );

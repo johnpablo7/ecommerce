@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getGlobal, getImageUrl } from "@/api/directus";
+import Image from "next/image";
 
 export const Logo = async () => {
   const global = await getGlobal();
@@ -10,7 +11,7 @@ export const Logo = async () => {
         href="/"
         className="inline-flex items-baseline justify-between gap-1"
       >
-        <img
+        <Image
           src={getImageUrl(global.logo) + "?width=38&height=38"}
           alt="logo"
           width={38}

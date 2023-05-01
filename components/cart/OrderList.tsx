@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { QuantityInput } from "../client/QuantityInput";
 import { HomeViewList } from "../shared-filter/HomeViewList";
 import { FiTrash2 } from "react-icons/fi";
@@ -15,7 +16,7 @@ export const OrderList = () => {
 
         <div className="grid grid-cols-4">
           <div className="col-span-2 flex items-center justify-center gap-4">
-            <img src="" alt="" />
+            <Image src="" alt="" />
             <div className="flex flex-col gap-1">
               <p>Title</p>
               <p className="text-primary">$ 45.00</p>
