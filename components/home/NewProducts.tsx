@@ -8,7 +8,7 @@ export const NewProducts = async () => {
   const products = await getProducts(params.toString());
 
   return (
-    <div className="py-32 z-20">
+    <div className="z-20">
       <h2 className="text-2xl font-roboto font-bold mb-7">NUEVOS PRODUCTOS</h2>
       <ProductsSwiper products={products} />
     </div>

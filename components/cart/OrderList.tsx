@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { QuantityInput } from "../client/QuantityInput";
-import { HomeViewList } from "../shared-filter/HomeViewList";
+import { HomeViewList } from "../categories/shared-filter/HomeViewList";
 import { FiTrash2 } from "react-icons/fi";
 
 export const OrderList = () => {

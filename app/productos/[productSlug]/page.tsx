@@ -1,6 +1,6 @@
 import { getProducts } from "@/api/directus";
-import { ViewImage } from "@/components/product-view/ViewImage";
-import { ViewProductCard } from "@/components/product-view/ViewProductCard";
+import { ViewImage } from "@/components/products/ViewImage";
+import { ViewProductCard } from "@/components/products/ViewProductCard";
 
 import { notFound } from "next/navigation";
 

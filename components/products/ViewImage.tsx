@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { HomeViewList } from "../shared-filter/HomeViewList";
+import { HomeViewList } from "../categories/shared-filter/HomeViewList";
 import { getImageUrl } from "@/api/directus";
 import { TProduct } from "@/types/product";
 import Image from "next/image";
@@ -18,7 +18,7 @@ export const ViewImage: FC<ViewImageProps> = ({ product }) => {
           width={380}
           height={420}
           alt="product"
-          className="object-cover w-full"
+          className="object-cover w-[200px]"
         />
       </div>
     </div>

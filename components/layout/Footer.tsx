@@ -10,7 +10,7 @@ export const Footer = async () => {
   const global = await getGlobal();
 
   return (
-    <div className="py-12 grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-12 text-secondary">
+    <div className="py-10 grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-12 text-secondary">
       <div className="col-span-1 flex flex-col gap-6">
         <div>
           {/* @ts-expect-error Async Server Component */}

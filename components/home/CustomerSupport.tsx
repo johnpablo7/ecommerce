@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export const CustomerSupport = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 items-center justify-center py-16 gap-8">
-      <div className="flex items-center justify-center border border-primary py-4 px-8 gap-6">
+    <div className="mx-4 lg:mx-20 grid grid-cols-1 lg:grid-cols-3 items-center justify-center py-14 gap-4">
+      <div className="flex items-center justify-center border border-primary py-4 lg:px-8 gap-6">
         <div>
           <Image
             src="/svg/delivery.svg"
@@ -18,7 +18,7 @@ export const CustomerSupport = () => {
           <p className="text-sm opacity-70">Pedidos superiores a $200</p>
         </div>
       </div>
-      <div className="flex items-center justify-center border border-primary py-4 px-8 gap-6">
+      <div className="flex items-center justify-center border border-primary py-4 lg:px-8 gap-6">
         <div>
           <Image
             src="/svg/money.svg"
@@ -33,7 +33,7 @@ export const CustomerSupport = () => {
           <p className="text-sm opacity-70">30 días de devolución de dinero</p>
         </div>
       </div>
-      <div className="flex items-center justify-center border border-primary py-4 px-8 gap-6">
+      <div className="flex items-center justify-center border border-primary py-4 lg:px-8 gap-6">
         <div>
           <Image
             src="/svg/service.svg"

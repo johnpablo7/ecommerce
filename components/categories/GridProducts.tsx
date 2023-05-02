@@ -1,7 +1,7 @@
 import { getProducts } from "@/api/directus";
 import { TCategory } from "../../types/category";
-import { ProductCard } from "../shared-product/ProductCard";
-import { Defaultsorting } from "../shared-product/Defaultsorting";
+import { ProductCard } from "./shared-product/ProductCard";
+import { Defaultsorting } from "./shared-product/Defaultsorting";
 
 export const GridProducts = async ({ category }: { category: TCategory }) => {
   let products = await getProducts();

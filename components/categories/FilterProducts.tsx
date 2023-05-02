@@ -1,10 +1,10 @@
-import { HomeViewList } from "../shared-filter/HomeViewList";
+import { HomeViewList } from "./shared-filter/HomeViewList";
 
-import { Size } from "../shared-filter/Size";
-import { Color } from "../shared-filter/Color";
-import { RangeSlider } from "../shared-filter/RangeSlider";
-import { SelectCategory } from "../shared-filter/SelectCategory";
-import { SelectBrand } from "../shared-filter/SelectBrand";
+import { Size } from "./shared-filter/Size";
+import { Color } from "./shared-filter/Color";
+import { RangeSlider } from "./shared-filter/RangeSlider";
+import { SelectCategory } from "./shared-filter/SelectCategory";
+import { SelectBrand } from "./shared-filter/SelectBrand";
 
 export const FilterProducts = () => {
   return (

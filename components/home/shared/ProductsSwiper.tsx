@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getImageUrl } from "@/api/directus";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperNavButtons } from "../../client/swiper/SwiperNavButtons";
-import { ProductCardInfo } from "../../shared-product/ProductCardInfo";
+import { ProductCardInfo } from "../../categories/shared-product/ProductCardInfo";
 import { AddToCartButton } from "../../client/AddToCartButton";
 import { TProduct } from "@/types/product";
 import Image from "next/image";

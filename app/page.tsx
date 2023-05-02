@@ -14,6 +14,8 @@ export default function Home() {
       <div className="px-4">
         <div className="max-w-container mx-auto">
           <CustomerSupport />
+
+          {/* @ts-expect-error Async Server Component */}
           <ProductDiscount />
 
           {/* @ts-expect-error Async Server Component */}
@@ -23,6 +25,8 @@ export default function Home() {
           <NewProducts />
 
           <ExclusiveDiscount />
+
+          {/* @ts-expect-error Async Server Component */}
           <RecomendedForYou />
         </div>
       </div>

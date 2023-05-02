@@ -7,7 +7,7 @@ export const ShopByCategory = async () => {
   categories = categories.filter((c) => c.parent === null);
 
   return (
-    <div className="py-16">
+    <div className="py-14">
       <h2 className="text-2xl font-roboto font-bold mb-7">
         COMPRA POR CATEGORÍA
       </h2>

@@ -2,16 +2,20 @@ import { FC } from "react";
 import Link from "next/link";
 import { getImageUrl } from "@/api/directus";
 import { ProductCardInfo } from "./ProductCardInfo";
-import { AddToCartButton } from "../client/AddToCartButton";
+import { AddToCartButton } from "../../client/AddToCartButton";
 import { TProduct } from "@/types/product";
 import Image from "next/image";
 
 type ProductCardProps = {
   product: TProduct;
+  showDescription?: boolean;
   // className?: string;
 };
 
-export const ProductCard: FC<ProductCardProps> = ({ product }) => {
+export const ProductCard: FC<ProductCardProps> = ({
+  product,
+  showDescription = true,
+}) => {
   //, className <- a lado de product..
   return (
     // <div className={className}>
@@ -27,7 +31,7 @@ export const ProductCard: FC<ProductCardProps> = ({ product }) => {
           alt="product"
           className="object-cover w-full"
         />
-        <ProductCardInfo product={product} />
+        <ProductCardInfo product={product} showDescription={showDescription} />
       </Link>
 
       <AddToCartButton />
