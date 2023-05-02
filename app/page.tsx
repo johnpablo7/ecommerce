@@ -3,7 +3,7 @@ import { CustomerSupport } from "@/components/home/CustomerSupport";
 import { ProductDiscount } from "@/components/home/ProductDiscount";
 import { ShopByCategory } from "@/components/home/ShopByCategory";
 import { NewProducts } from "@/components/home/NewProducts";
-import { OnlineExclusive } from "@/components/home/OnlineExclusive";
+import { ExclusiveDiscount } from "@/components/home/ExclusiveDiscount";
 import { RecomendedForYou } from "@/components/home/RecomendedForYou";
 
 export default function Home() {
@@ -22,8 +22,8 @@ export default function Home() {
           {/* @ts-expect-error Async Server Component */}
           <NewProducts />
 
-          {/* <OnlineExclusive /> */}
-          {/* <RecomendedForYou /> */}
+          <ExclusiveDiscount />
+          <RecomendedForYou />
         </div>
       </div>
     </div>

@@ -60,7 +60,7 @@ export const ViewProductCard: FC<ViewProductCardProps> = ({ product }) => {
             <AddToCartButton />
             <WishList />
           </div>
-          <div className="border border-[#e5e7eb] opacity-80 mb-3" />
+          <div className="border-t border-[#E9E4E4] opacity-80 mb-3" />
           <SocialNetworks />
         </div>
       </div>

@@ -10,6 +10,7 @@ import clsx from "clsx";
 import "@/components/client/swiper/SwiperCore";
 import "./globals.css";
 import { Footer } from "@/components/layout/Footer";
+import Image from "next/image";
 
 export const generateMetadata = async () => {
   const { title, description } = await getGlobal();
@@ -39,9 +40,11 @@ export default async function RootLayout({
           >
             {/* Row 1 */}
             <div className="col-start-1 col-end-3 xl:col-end-2 max-xl:bg-primary max-xl:text-white">
-              <div className="xl:ml-container-side">
-                {/* @ts-expect-error Async Server Component */}
-                <Logo />
+              <div className="px-4">
+                <div className="xl:ml-container-side">
+                  {/* @ts-expect-error Async Server Component */}
+                  <Logo />
+                </div>
               </div>
             </div>
 
@@ -69,16 +72,30 @@ export default async function RootLayout({
             <main className="col-start-1 col-end-4 ">{children}</main>
 
             <div className="col-start-1 col-end-4">
-              <div className="px-4">
+              <div className="border-t border-[#E9E4E4] opacity-80" />
+              <div className="px-4 bg-[#f3f3f3]">
                 <div className="max-w-container mx-auto">
                   {/* @ts-expect-error Async Server Component */}
                   <Footer />
                 </div>
               </div>
+              <div className="flex flex-col gap-2 items-center lg:flex-row lg:justify-between py-4 bg-secondary text-white">
+                <div className="xl:ml-container-side">
+                  <p>© E! SHOP - Todos los derechos reservados</p>
+                </div>
+                <div className="xl:mr-container-side">
+                  <Image
+                    src="/images/payment-method.png"
+                    alt="payment"
+                    width={333}
+                    height={28}
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Row 3 */}
-            <div className="p-4 xl:hidden col-start-1 col-end-4 bg-red-300 text-center">
+            <div className="p-3 xl:hidden col-start-1 col-end-4">
               <MobileMenu />
             </div>
           </div>
