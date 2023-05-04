@@ -6,7 +6,7 @@ import { Size } from "../categories/shared-filter/Size";
 import { Color } from "../categories/shared-filter/Color";
 import { QuantityInput } from "../client/QuantityInput";
 import { AddToCartButton } from "../client/AddToCartButton";
-import { WishList } from "../client/WishList";
+import { AddWishListButton } from "../client/AddWishListButton";
 import { SocialNetworks } from "../common/SocialNetworks";
 
 type ViewProductCardProps = {
@@ -17,7 +17,7 @@ export const ViewProductCard: FC<ViewProductCardProps> = ({ product }) => {
   return (
     <div className="py-16">
       <div className="text-secondary flex flex-col">
-        <h1 className="text-3xl font-roboto uppercase font-bold">
+        <h1 className="text-3xl font-roboto uppercase font-bold mt-2">
           {product.name}
         </h1>
         <Reviews />
@@ -58,7 +58,7 @@ export const ViewProductCard: FC<ViewProductCardProps> = ({ product }) => {
           <QuantityInput />
           <div className="grid grid-cols-2 gap-4 mt-2 mb-4 w-[480px]">
             <AddToCartButton />
-            <WishList />
+            <AddWishListButton />
           </div>
           <div className="border-t border-[#E9E4E4] opacity-80 mb-3" />
           <SocialNetworks />

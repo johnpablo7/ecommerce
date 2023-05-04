@@ -11,7 +11,7 @@ export const Logo = async () => {
   const global = await getGlobal();
 
   return (
-    <div className="py-2 lg:py-3">
+    <div className="py-2">
       <Link
         href="/"
         className="inline-flex items-baseline justify-between gap-1"

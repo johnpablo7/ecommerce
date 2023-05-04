@@ -28,16 +28,17 @@ export const ProductDiscount = async () => {
             <Image
               src={getImageUrl(product.image) + "?width=390&height=260"}
               alt="product"
-              width={200}
-              height={150}
+              // width={200}
+              // height={150}
+              width="0"
+              height="0"
+              sizes="100vw"
               priority
               className="object-contain object-center w-[200px] h-[180px] flex-shrink-0 hover:scale-105 transition-all duration-300"
             />
           </div>
         </div>
       ))}
-
-      {/* <div>Otro producto</div> */}
     </div>
   );
 };

@@ -4,14 +4,18 @@ import Link from "next/link";
 export const Banner = async () => {
   return (
     <div className="relative">
-      <div className="relative h-[430px]">
+      <div>
         <Image
           src="/images/banner-1.jpg"
           alt="banner-1"
-          height={430}
-          width={1920}
+          width="0"
+          height="0"
+          sizes="100vw"
           priority
-          className="object-cover object-bottom w-full h-full"
+          className="object-cover object-bottom h-[430px] w-full lg:h-[330]"
+          // height={430}
+          // width={1920}
+          // className="object-cover object-bottom w-full h-full"
         />
       </div>
 

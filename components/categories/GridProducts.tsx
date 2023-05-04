@@ -2,6 +2,7 @@ import { getProducts } from "@/api/directus";
 import { TCategory } from "../../types/category";
 import { ProductCard } from "./shared-product/ProductCard";
 import { Defaultsorting } from "./shared-product/Defaultsorting";
+import { PaginationButtons } from "./shared-product/PaginationButtons";
 
 export const GridProducts = async ({ category }: { category: TCategory }) => {
   let products = await getProducts();
@@ -18,6 +19,8 @@ export const GridProducts = async ({ category }: { category: TCategory }) => {
           // className="" // si se quiere modificar los styles ponerlo dentro del ProductCard
         ))}
       </div>
+
+      <PaginationButtons />
     </div>
   );
 };

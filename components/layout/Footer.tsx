@@ -10,7 +10,7 @@ export const Footer = async () => {
   const global = await getGlobal();
 
   return (
-    <div className="py-10 grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-12 text-secondary">
+    <div className="py-10 lg:py-12 grid grid-cols-1 lg:grid-cols-3 gap-6 xl:gap-12 text-secondary">
       <div className="col-span-1 flex flex-col gap-6">
         <div>
           {/* @ts-expect-error Async Server Component */}
@@ -26,9 +26,9 @@ export const Footer = async () => {
               <input
                 type="text"
                 placeholder="Su dirección de correo electrónico"
-                className="w-full py-[13px] px-4 outline-none lg:w-[500px] text-secondary text-sm border border-gray-300 focus:border-primary rounded-tl-md rounded-bl-md border-r-0"
+                className="w-full py-[14px] px-4 outline-none lg:w-[500px] text-secondary text-sm border border-gray-300 focus:border-primary rounded-tl-md rounded-bl-md border-r-0"
               />
-              <button className="bg-primary hover:bg-white text-white hover:text-primary hover:border-primary border font-semibold py-3 px-4 rounded-tr-md rounded-br-md">
+              <button className="bg-primary hover:bg-white text-white hover:text-primary hover:border-primary border py-3 px-4 rounded-tr-md rounded-br-md transition duration-300 font-semibold">
                 SUSCRIBIR
               </button>
             </form>
@@ -36,7 +36,7 @@ export const Footer = async () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 lg:pt-5">
         <div className="grid grid-cols-2">
           <div>
             <div className="text-lg font-semibold font-roboto mb-5">
@@ -65,7 +65,7 @@ export const Footer = async () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 lg:pt-5">
         <div>
           <h3 className="text-lg font-semibold font-roboto mb-5">CONTACTO</h3>
           <div className="flex flex-col gap-2">

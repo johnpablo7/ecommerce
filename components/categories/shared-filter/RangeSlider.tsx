@@ -13,11 +13,10 @@ export const RangeSlider = () => {
             min="1"
             max="100"
             defaultValue="10"
-            className="w-full h-2 bg-gray-200 appearance-none"
+            className="w-full h-2 bg-gray-200 appearance-none mb-6"
           />
         </div>
       </div>
-
       <div className="border-t border-[#E9E4E4] opacity-80 mb-4" />
     </>
   );

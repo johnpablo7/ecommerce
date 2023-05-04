@@ -6,10 +6,10 @@ import { notFound } from "next/navigation";
 export default async function CartPage({
   params,
 }: {
-  params: { carritoSlug: string };
+  params: { cartSlug: string };
 }) {
   const query = new URLSearchParams();
-  query.set("filter[slug]", params.carritoSlug);
+  query.set("filter[slug]", params.cartSlug);
 
   const products = await getProducts(query.toString());
   const product = products[0];
@@ -20,11 +20,7 @@ export default async function CartPage({
 
   return (
     <div className="xl:mx-container-side">
-      <div className="grid grid-cols-4 gap-6">
-        <OrderList />
-        <OrderSummary />
-        {product.name}
-      </div>
+      {/* Aqui va en componente que esta en el Home */}
     </div>
   );
 }

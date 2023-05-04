@@ -8,9 +8,9 @@ import { SelectBrand } from "./shared-filter/SelectBrand";
 
 export const FilterProducts = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mb-8">
       <HomeViewList />
-      <div className="px-4 pt-8 pb-4 border border-white shadow-md text-secondary">
+      <div className="px-4 pt-8 mb-4 border border-white shadow-md text-secondary">
         <SelectCategory />
         <SelectBrand />
         <RangeSlider />
