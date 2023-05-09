@@ -57,7 +57,7 @@ export const ViewProductCard: FC<ViewProductCardProps> = ({ product }) => {
           <Color />
           <QuantityInput />
           <div className="grid grid-cols-2 gap-4 mt-2 mb-4 w-[480px]">
-            <AddToCartButton />
+            <AddToCartButton productSlug={product.slug} />
             <AddWishListButton />
           </div>
           <div className="border-t border-[#E9E4E4] opacity-80 mb-3" />

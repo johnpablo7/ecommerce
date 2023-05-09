@@ -51,7 +51,7 @@ export const ProductsSwiper: FC<{ products: TProduct[] }> = ({ products }) => {
               <ProductCardInfo product={product} />
             </Link>
 
-            <AddToCartButton />
+            <AddToCartButton productSlug={product.slug} />
           </div>
         </SwiperSlide>
       ))}

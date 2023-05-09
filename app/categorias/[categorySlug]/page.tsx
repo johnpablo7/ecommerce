@@ -16,17 +16,19 @@ export default async function CategoryPage({
   }
 
   return (
-    <div className="xl:mx-container-side">
-      <div className="grid grid-cols-1 xl:grid-cols-4 gap-6">
-        <div className="col-start-1 col-end-2">
-          <FilterProducts />
+    <div className="px-4">
+      <div className="max-w-container mx-auto">
+        <div className="grid grid-cols-1 xl:grid-cols-4 gap-6">
+          <div className="col-start-1 col-end-2">
+            <FilterProducts />
+          </div>
+          <div className="col-start-2 col-end-5">
+            {/* @ts-expect-error Async Server Component */}
+            <GridProducts category={category} />
+          </div>
         </div>
-        <div className="col-start-2 col-end-5">
-          {/* @ts-expect-error Async Server Component */}
-          <GridProducts category={category} />
-        </div>
+        {/* {params.categorySlug} */}
       </div>
-      {/* {params.categorySlug} */}
     </div>
   );
 }

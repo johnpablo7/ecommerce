@@ -1,9 +1,24 @@
+"use client";
+
 import Image from "next/image";
 import { QuantityInput } from "../client/QuantityInput";
-import { HomeViewList } from "../categories/shared-filter/HomeViewList";
 import { FiTrash2 } from "react-icons/fi";
+import { useCartPopulated } from "@/store/cart";
+import { getImageUrl } from "@/api/directus";
 
 export const OrderList = () => {
+  const cartPopulated = useCartPopulated();
+
+  if (cartPopulated.state === "loading") {
+    return <p>Loading...</p>;
+  }
+
+  if (cartPopulated.state === "hasError") {
+    return <p>Error: {cartPopulated.error + ""}</p>;
+  }
+
+  // console.log(cartPopulated.data);
+
   return (
     <div className="pb-10">
       <div className="flex flex-col gap-6">
@@ -13,37 +28,44 @@ export const OrderList = () => {
           <p className="text-start">Precio Total</p>
         </div>
 
-        <div className="p-4 border border-gray-200">
-          <div className="grid grid-cols-4 items-center">
-            <div className="col-span-2 flex items-center justify-center gap-4">
-              <div>
+        {cartPopulated.data.map((item) => (
+          <div key={item.product.slug} className="p-4 border border-gray-200">
+            <div className="grid grid-cols-4 items-center">
+              <div className="col-span-2 flex items-center gap-4">
                 <Image
-                  src="/images/cart.png"
+                  src={
+                    getImageUrl(item.product.image) + "?width=150&height=120"
+                  }
                   alt="cart"
                   width={150}
                   height={120}
+                  className="object-cover"
                 />
+
+                <div className="flex flex-col gap-1">
+                  <p className="text-gray-600 font-semibold">
+                    {item.product.name}
+                  </p>
+                  <p className="text-primary font-semibold">
+                    s/ {item.product.price}
+                  </p>
+                  <p className="text-gray-600">Talla: M</p>
+                </div>
               </div>
 
-              <div className="flex flex-col gap-1">
-                <p className="text-gray-600 font-semibold">
-                  XB450AP Extra Bass Headphones
-                </p>
-                <p className="text-primary font-semibold">s/ 45.00</p>
-                <p className="text-gray-600">Talla: M</p>
+              <div>
+                <QuantityInput />
               </div>
-            </div>
 
-            <div>
-              <QuantityInput />
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div className="text-primary font-semibold">s/ 45.00</div>
-              <FiTrash2 className="text-gray-600 hover:text-primary text-xl" />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-primary font-semibold">
+                  s/ {item.product.price}
+                </div>
+                <FiTrash2 className="text-gray-600 hover:text-primary text-xl" />
+              </div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );

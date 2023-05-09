@@ -34,7 +34,7 @@ export const ProductCard: FC<ProductCardProps> = ({
         <ProductCardInfo product={product} showDescription={showDescription} />
       </Link>
 
-      <AddToCartButton />
+      <AddToCartButton productSlug={product.slug} />
     </div>
   );
 };
