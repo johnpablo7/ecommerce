@@ -3,21 +3,22 @@
 import Image from "next/image";
 import { QuantityInput } from "../client/QuantityInput";
 import { FiTrash2 } from "react-icons/fi";
-import { useCartPopulated } from "@/store/cart";
+import { useCartActions, useCartPopulated } from "@/store/cart";
 import { getImageUrl } from "@/api/directus";
 
 export const OrderList = () => {
-  const cartPopulated = useCartPopulated();
+  const { populatedCart, isLoading, error } = useCartPopulated();
+  const { removeItem } = useCartActions();
 
-  if (cartPopulated.state === "loading") {
+  if (isLoading) {
     return <p>Loading...</p>;
   }
 
-  if (cartPopulated.state === "hasError") {
-    return <p>Error: {cartPopulated.error + ""}</p>;
+  if (error) {
+    return <p>Error: {error + ""}</p>;
   }
 
-  // console.log(cartPopulated.data);
+  // console.log(populatedCart);
 
   return (
     <div className="pb-10">
@@ -28,7 +29,7 @@ export const OrderList = () => {
           <p className="text-start">Precio Total</p>
         </div>
 
-        {cartPopulated.data.map((item) => (
+        {populatedCart!.map((item) => (
           <div key={item.product.slug} className="p-4 border border-gray-200">
             <div className="grid grid-cols-4 items-center">
               <div className="col-span-2 flex items-center gap-4">
@@ -53,15 +54,19 @@ export const OrderList = () => {
                 </div>
               </div>
 
-              <div>
-                <QuantityInput />
-              </div>
+              <QuantityInput
+                productSlug={item.product.slug}
+                quantity={item.quantity}
+              />
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-primary font-semibold">
-                  s/ {item.product.price}
+                  s/ {(item.product.price * item.quantity).toFixed(2)}
                 </div>
-                <FiTrash2 className="text-gray-600 hover:text-primary text-xl" />
+
+                {/* <button onClick={removeItem()}>
+                  <FiTrash2 className="text-gray-600 hover:text-primary text-xl" />
+                </button> */}
               </div>
             </div>
           </div>

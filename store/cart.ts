@@ -1,7 +1,7 @@
-import { getProducts } from "@/api/directus";
-import { TProduct } from "@/types/product";
+import { getProductsBySlugs } from "@/api/directus";
 import { atom, useSetAtom, useAtomValue } from "jotai";
-import { atomWithStorage, loadable } from "jotai/utils";
+import { atomWithStorage } from "jotai/utils";
+import useSWR from "swr";
 
 type CartItem = {
   productSlug: string;
@@ -14,31 +14,29 @@ const cartQuantityAtom = atom((get) =>
   get(cartAtom).reduce((total, item) => total + item.quantity, 0)
 );
 
-const cartPopulatedAtom = atom(async (get) => {
-  const cart = get(cartAtom);
-  const productIds = cart.map((item) => item.productSlug);
-  let products: TProduct[] = [];
-  if (productIds.length) {
-    const params = new URLSearchParams();
-    params.set(
-      "filter",
-      JSON.stringify({
-        slug: { _in: productIds },
-      })
-    );
-    products = await getProducts(params.toString());
-  }
-  return cart.map((item) => ({
-    product: products.find((p) => p.slug === item.productSlug)!,
-    quantity: item.quantity,
-  }));
-});
-
-const loadableCartPopulatedAtom = loadable(cartPopulatedAtom);
-
 export const useCart = () => useAtomValue(cartAtom);
 export const useCartQuantity = () => useAtomValue(cartQuantityAtom);
-export const useCartPopulated = () => useAtomValue(loadableCartPopulatedAtom);
+
+export const useCartPopulated = () => {
+  const cart = useCart();
+  const productSlugs = cart.map((item) => item.productSlug);
+  const {
+    data: products,
+    isLoading,
+    error,
+  } = useSWR({ productSlugs }, ({ productSlugs }) => {
+    return getProductsBySlugs(productSlugs);
+  });
+
+  const populatedCart = products
+    ? cart.map((item) => ({
+        product: products.find((p) => p.slug === item.productSlug)!,
+        quantity: item.quantity,
+      }))
+    : undefined;
+
+  return { populatedCart, isLoading, error };
+};
 
 export const useCartActions = () => {
   const setCart = useSetAtom(cartAtom);

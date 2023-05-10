@@ -4,7 +4,7 @@ import { TProduct } from "@/types/product";
 import { Reviews } from "../common/Reviews";
 import { Size } from "../categories/shared-filter/Size";
 import { Color } from "../categories/shared-filter/Color";
-import { QuantityInput } from "../client/QuantityInput";
+// import { QuantityInput } from "../client/QuantityInput";
 import { AddToCartButton } from "../client/AddToCartButton";
 import { AddWishListButton } from "../client/AddWishListButton";
 import { SocialNetworks } from "../common/SocialNetworks";
@@ -55,7 +55,12 @@ export const ViewProductCard: FC<ViewProductCardProps> = ({ product }) => {
 
           <Size />
           <Color />
-          <QuantityInput />
+
+          {/* <div className="flex flex-col gap-2 mb-2">
+            <div className="font-semibold">Cantidad</div>
+            <QuantityInput  />
+          </div> */}
+
           <div className="grid grid-cols-2 gap-4 mt-2 mb-4 w-[480px]">
             <AddToCartButton productSlug={product.slug} />
             <AddWishListButton />

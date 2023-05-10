@@ -1,4 +1,3 @@
-import { getProducts } from "@/api/directus";
 import { OrderList } from "@/components/cart/OrderList";
 import { OrderSummary } from "@/components/cart/OrderSummary";
 import { HomeViewList } from "@/components/categories/shared-filter/HomeViewList";

@@ -49,6 +49,17 @@ export const getProducts = async (params?: string) => {
   return data.data;
 };
 
+export const getProductsBySlugs = async (slugs: string[]) => {
+  const params = new URLSearchParams();
+  params.set(
+    "filter",
+    JSON.stringify({
+      slug: { _in: slugs },
+    })
+  );
+  return getProducts(params.toString());
+};
+
 export function getImageUrl(id: string) {
   return API_URL + "/assets/" + id;
 }

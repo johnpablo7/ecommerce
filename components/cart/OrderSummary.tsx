@@ -1,12 +1,33 @@
+"use client";
+
+import { useCartPopulated } from "@/store/cart";
+
 export const OrderSummary = () => {
+  const { populatedCart, isLoading, error } = useCartPopulated();
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error + ""}</p>;
+  }
+
+  const totalPrice = populatedCart!.reduce((total, item) => {
+    return total + item.product.price * item.quantity;
+  }, 0);
+
+  // console.log(totalPrice);
+
   return (
     <div className="p-4 border border-gray-200">
       <div className="text-gray-600 font-semibold flex flex-col gap-2 mb-4">
         <h1 className="uppercase text-xl mb-1">resumen del pedido</h1>
         <div className="flex items-center justify-between text-gray-500">
           <p>Subtotal</p>
-          <p>s/45.00</p>
+          <p>s/ {totalPrice.toFixed(2)}</p>
         </div>
+
         <div className="flex items-center justify-between text-gray-500">
           <p>Entrega</p>
           <p>Gratis</p>
@@ -16,9 +37,10 @@ export const OrderSummary = () => {
           <p>Gratis</p>
         </div>
         <div className="border-t border-[#E9E4E4] opacity-80 mb-1" />
+
         <div className="flex items-center justify-between text-gray-600">
           <p>Total</p>
-          <p>s/45.00</p>
+          <p>s/ {totalPrice.toFixed(2)}</p>
         </div>
       </div>
       <form className="flex items-center justify-center mb-8">

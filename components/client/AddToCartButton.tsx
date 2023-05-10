@@ -1,7 +1,7 @@
 "use client";
 
-import { useCartActions } from "@/store/cart";
 import { RiShoppingCart2Line } from "react-icons/ri";
+import { useCartActions } from "@/store/cart";
 
 export const AddToCartButton = ({ productSlug }: { productSlug: string }) => {
   const { addItem } = useCartActions();
