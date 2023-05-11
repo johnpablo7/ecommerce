@@ -28,7 +28,7 @@ export const Footer = async () => {
                 placeholder="Su dirección de correo electrónico"
                 className="w-full py-[14px] px-4 outline-none lg:w-[500px] text-secondary text-sm border border-gray-300 focus:border-primary rounded-tl-md rounded-bl-md border-r-0"
               />
-              <button className="bg-primary hover:bg-white text-white hover:text-primary hover:border-primary border py-3 px-4 rounded-tr-md rounded-br-md transition duration-300 font-semibold">
+              <button className="bg-primary hover:bg-white text-white hover:text-primary hover:border-primary border py-3 px-4 rounded-tr-md rounded-br-md transition duration-300">
                 SUSCRIBIR
               </button>
             </form>

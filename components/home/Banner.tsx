@@ -20,7 +20,7 @@ export const Banner = async () => {
       </div>
 
       <div className="absolute top-[1px] items-center justify-center px-3 py-12 xl:py-12 xl:mx-container-side">
-        <h1 className="text-4xl xl:text-5xl xl:w-[560px] text-secondary font-roboto font-semibold mb-3 xl:mb-5 xl:leading-[4rem]">
+        <h1 className="text-4xl xl:text-5xl xl:w-[560px] text-secondary font-roboto font-bold mb-3 xl:mb-5 xl:leading-[4rem]">
           La Mejor Colección Para La Decoración Del Hogar
         </h1>
 
@@ -31,7 +31,7 @@ export const Banner = async () => {
 
         <Link
           href="/"
-          className="bg-primary text-white hover:text-primary hover:bg-white border hover:border-primary rounded py-2 xl:py-3 px-6 transition font-poppins font-semibold"
+          className="bg-primary text-white hover:text-primary hover:bg-white border hover:border-primary rounded py-2 xl:py-3 px-6 transition"
         >
           COMPRA AHORA
         </Link>

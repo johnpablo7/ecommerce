@@ -75,12 +75,12 @@ export const ManageAccount = () => {
         </div>
 
         <div className="border-t border-[#E9E4E4] opacity-80 my-3" />
-        <div className="flex flex-col gap-1">
+        <Link href="/mi-cuenta/lista-de-deseos" className="flex flex-col gap-1">
           <div className="flex flex-row gap-2 hover:text-primary">
             <RiHeartLine className="flex-none text-xl m-1" />
             <h3 className="text-lg font-semibold">Mi lista de deseos</h3>
           </div>
-        </div>
+        </Link>
 
         <div className="border-t border-[#E9E4E4] opacity-80 my-3" />
         <div className="flex flex-col gap-1">

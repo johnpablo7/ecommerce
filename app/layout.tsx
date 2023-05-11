@@ -71,6 +71,7 @@ export default async function RootLayout({
 
             <main className="col-start-1 col-end-4 ">{children}</main>
 
+            {/* Footer */}
             <div className="col-start-1 col-end-4">
               <div className="border-t border-[#E9E4E4] opacity-80" />
               <div className="px-4 bg-[#f3f3f3]">

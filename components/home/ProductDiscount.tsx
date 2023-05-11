@@ -13,13 +13,13 @@ export const ProductDiscount = async () => {
       {products.map((product) => (
         <div key={product.slug}>
           <div className="flex flex-col-reverse lg:flex-row items-center justify-between px-10 py-6 bg-[#fbe3e4]">
-            <div className="flex flex-col font-roboto font-bold">
-              <p className="text-lg text-primary">oferta del 30%</p>
-              <p className="text-xl mb-2">Envío gratis</p>
+            <div className="flex flex-col">
+              <p className="text-lg text-primary font-roboto">Oferta del 30%</p>
+              <p className="text-xl mb-2 font-roboto">Envío gratis</p>
               <p className="font-normal mb-4">Muebles naturales atractivos</p>
               <Link
                 href={"/productos/" + product.slug}
-                className="py-2 px-1 rounded-md bg-primary text-white hover:text-primary hover:bg-transparent border hover:border hover:border-primary font-semibold font-poppins text-center lg:w-[160px] transition"
+                className="py-2 px-1 rounded-md bg-primary text-white hover:text-primary hover:bg-transparent border hover:border hover:border-primary text-center lg:w-[160px] transition"
               >
                 Compra ahora
               </Link>
