@@ -21,7 +21,7 @@ export default function Home() {
       <div className="px-4">
         <div className="max-w-container mx-auto">
           {/* Modals */}
-          <div className="flex gap-5">
+          <div className="hidden md:flex gap-5">
             <div>
               <ShowCategoriesButton />
             </div>
@@ -36,7 +36,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex gap-5 mt-5">
+          <div className="hidden md:flex gap-5 mt-5">
             <div>
               <ShowCart />
             </div>

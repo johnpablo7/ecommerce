@@ -12,7 +12,7 @@ export const Banner = async () => {
           height="0"
           sizes="100vw"
           priority
-          className="object-cover object-bottom h-[430px] w-full lg:h-[330]"
+          className="object-cover object-bottom h-[430px] w-full"
           // height={430}
           // width={1920}
           // className="object-cover object-bottom w-full h-full"
@@ -31,7 +31,7 @@ export const Banner = async () => {
 
         <Link
           href="/"
-          className="bg-primary text-white hover:text-primary hover:bg-white border hover:border-primary rounded py-2 xl:py-3 px-6 transition"
+          className="bg-primary text-white hover:text-primary hover:bg-transparent border hover:border-primary rounded py-2 xl:py-3 px-6 transition"
         >
           COMPRA AHORA
         </Link>

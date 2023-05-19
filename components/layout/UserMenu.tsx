@@ -3,6 +3,7 @@
 import { useCartQuantity } from "@/store/cart";
 import Link from "next/link";
 import { CiHeart, CiShoppingCart, CiUser } from "react-icons/ci";
+import { ShowSession } from "../shared/ShowSession";
 
 export const UserMenu = () => {
   const cartQuantity = useCartQuantity();
@@ -29,13 +30,17 @@ export const UserMenu = () => {
           {cartQuantity}
         </span>
       </Link>
+
       <Link
         href="/acceso"
-        className="flex flex-col items-center cursor-pointer"
+        className="flex flex-col items-center cursor-pointer relative group"
       >
         <CiUser className="text-2xl xl:text-3xl" />
-        <p className="text-xs">Inicia sesión</p>
-        {/* <p className="text-xs">Cuenta</p> */}
+        <p className="text-xs">Cuenta</p>
+
+        <div className="absolute top-full right-0 hidden group-hover:block">
+          <ShowSession />
+        </div>
       </Link>
     </div>
   );
