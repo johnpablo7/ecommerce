@@ -14,7 +14,7 @@ export const SideSearch = () => {
         `bg-white fixed -top-full w-full h-full flex flex-col z-50 transition-all`,
         showMobileSearch ? "translate-y-full" : "",
         // Desktop
-        `lg:top-0`
+        `md:top-0`
       )}
     >
       <div className="px-4">

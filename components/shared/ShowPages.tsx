@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const ShowPages = () => {
   return (
-    <div className="flex flex-col p-4 lg:w-[550px] bg-white border shadow-md text-secondary gap-1">
+    <div className="flex flex-col p-4 lg:w-[550px] bg-white border shadow-md text-secondary gap-1 rounded-md">
       <div className="grid grid-cols-3 gap-5">
         <div className="flex flex-col gap-1">
           <h3 className="font-semibold mb-1">Otras páginas</h3>

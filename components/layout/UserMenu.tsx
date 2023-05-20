@@ -4,6 +4,8 @@ import { useCartQuantity } from "@/store/cart";
 import Link from "next/link";
 import { CiHeart, CiShoppingCart, CiUser } from "react-icons/ci";
 import { ShowSession } from "../shared/ShowSession";
+import { ShowCart } from "../shared/ShowCart";
+import { ShowAccount } from "../shared/ShowAccount";
 
 export const UserMenu = () => {
   const cartQuantity = useCartQuantity();
@@ -20,28 +22,33 @@ export const UserMenu = () => {
           6
         </span>
       </Link>
+
       <Link
         href="/carrito"
-        className="hidden relative xl:flex flex-col items-center"
+        className="hidden relative xl:flex flex-col items-center group"
       >
         <CiShoppingCart className="text-2xl xl:text-3xl" />
         <p className="text-xs">Carro</p>
         <span className="absolute bg-secondary text-white rounded-full text-[10px] py-[1px] px-[5px] -top-1 -right-1">
           {cartQuantity}
         </span>
+        <div className="absolute top-full right-0 hidden group-hover:block transition-all duration-500">
+          <ShowCart />
+        </div>
       </Link>
 
-      <Link
-        href="/acceso"
-        className="flex flex-col items-center cursor-pointer relative group"
-      >
+      <div className="flex flex-col items-center cursor-pointer relative group">
         <CiUser className="text-2xl xl:text-3xl" />
         <p className="text-xs">Cuenta</p>
 
-        <div className="absolute top-full right-0 hidden group-hover:block">
+        {/* <div className="absolute top-full right-0 hidden group-hover:block transition-all duration-500">
           <ShowSession />
+        </div> */}
+
+        <div className="absolute top-full right-0 hidden group-hover:block transition-all duration-500 ">
+          <ShowAccount />
         </div>
-      </Link>
+      </div>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { MdOutlineClose } from "react-icons/md";
 
 export const ShowCart = () => {
   return (
-    <div className="flex flex-col lg:w-[320px] bg-white border shadow-md text-secondary">
+    <div className="flex flex-col lg:w-[320px] bg-white border shadow-md text-secondary rounded-md">
       <Cart />
       <ButtonCart />
     </div>

@@ -22,7 +22,7 @@ export const ManageAccount = () => {
         </div>
       </div>
 
-      <div className="px-2 py-8 border border-white shadow-slate-100 shadow-lg text-gray-600">
+      <div className="hidden lg:block px-2 py-8 border border-white shadow-slate-100 shadow-lg text-gray-600">
         <div className="flex flex-col gap-1">
           <div className="flex flex-row gap-2 hover:text-primary">
             <RiAccountBoxLine className="flex-none text-xl m-1" />

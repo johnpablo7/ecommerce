@@ -10,10 +10,10 @@ export const SideMenu = () => {
   return (
     <div
       className={clsx(
-        `bg-white fixed top-0 w-[320px] h-full flex flex-col z-50 transition-all`,
-        showMobileMenu ? "left-0" : "-left-full",
+        `bg-white fixed -left-full top-0 w-full h-full flex flex-col z-50 transition-all`,
+        showMobileMenu ? "translate-x-full" : "",
         // Desktop
-        `lg:left-0`
+        `md:left-0`
       )}
     >
       <div>

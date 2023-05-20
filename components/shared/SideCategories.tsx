@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useAtom } from "jotai";
 import { mobileCategoriesAtom } from "@/store/sidebar";
 import { RiCloseLine } from "react-icons/ri";
@@ -13,10 +12,10 @@ export const SideCategories = () => {
   return (
     <div
       className={clsx(
-        `bg-white fixed top-0 w-[320px] h-full flex flex-col z-50 transition-all`,
-        showMobileCategories ? "left-0" : "-left-full",
+        `bg-white fixed -left-full top-0 w-full h-full flex flex-col z-50 transition-all`,
+        showMobileCategories ? "translate-x-full" : "",
         // Desktop
-        `lg:left-0`
+        `md:left-0`
       )}
     >
       <div>

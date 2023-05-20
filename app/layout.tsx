@@ -39,7 +39,7 @@ export default async function RootLayout({
             )}
           >
             {/* Row 1 */}
-            <div className="max-xl:sticky z-50 top-0 col-start-1 col-end-3 xl:col-end-2 max-xl:bg-primary max-xl:text-white">
+            <div className="max-xl:sticky z-40 top-0 col-start-1 col-end-3 xl:col-end-2 max-xl:bg-primary max-xl:text-white">
               <div className="px-4">
                 <div className="xl:ml-container-side">
                   {/* @ts-expect-error Async Server Component */}
@@ -63,7 +63,7 @@ export default async function RootLayout({
             <div className="max-xl:hidden col-start-2 col-end-3">
               <Search />
             </div>
-            <div className="max-xl:sticky z-50 top-0 col-start-3 col-end-4 bg-primary text-white">
+            <div className="max-xl:sticky z-40 top-0 col-start-3 col-end-4 bg-primary text-white">
               <div className="xl:mr-container-side">
                 <UserMenu />
               </div>

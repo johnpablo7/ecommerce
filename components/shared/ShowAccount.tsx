@@ -9,7 +9,7 @@ import {
 
 export const ShowAccount = () => {
   return (
-    <div className="flex flex-col justify-start gap-2 p-4 lg:w-[210px] bg-white border shadow-md text-secondary">
+    <div className="flex flex-col justify-start gap-2 p-4 w-52 lg:w-[210px] bg-white border shadow-md text-secondary rounded-md">
       <h3 className="font-roboto text-center px-2">
         Bienvenido a la tienda E! SHOP
       </h3>
