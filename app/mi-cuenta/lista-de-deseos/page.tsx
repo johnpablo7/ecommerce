@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { FiTrash2 } from "react-icons/fi";
 import { useCartActions } from "@/store/cart";
@@ -11,7 +10,7 @@ export default function WishListPage() {
   return (
     <div className="pb-10">
       <div className="flex flex-col gap-5">
-        <div className="p-4 border border-gray-200 mt-24">
+        <div className="p-4 border border-gray-200">
           <div className="grid max-md:grid-cols-2 lg:grid-cols-6 items-center gap-5">
             <div className="max-md:col-start-1 max-md:col-end-3">
               <Image

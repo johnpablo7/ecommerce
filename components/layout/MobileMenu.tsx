@@ -16,8 +16,10 @@ import { SideMenu } from "../shared/SideMenu";
 import { SideCategories } from "../shared/SideCategories";
 import { SideCart } from "../shared/SideCart";
 import { SideSearch } from "../shared/SideSearch";
+import { TCategory } from "@/types/category";
+import { FC } from "react";
 
-export const MobileMenu = () => {
+export const MobileMenu: FC<{ categories: TCategory[] }> = ({ categories }) => {
   const [showMobileMenu, setShowMobileMenu] = useAtom(mobileMenuAtom);
   const [showMobileCategories, setShowMobileCategories] =
     useAtom(mobileCategoriesAtom);
@@ -43,7 +45,8 @@ export const MobileMenu = () => {
   return (
     <div>
       <SideMenu />
-      <SideCategories />
+      <SideCategories categories={categories} />
+
       <SideSearch />
       <SideCart />
       <nav className="grid grid-cols-4 gap-2 text-sm">

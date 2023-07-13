@@ -20,7 +20,7 @@ export const ProductCardInfo: FC<ProductCardInfoProps> = ({
       </h2>
 
       {showDescription && (
-        <p className="text-sm text-secondary line-clamp-2 mb-2">
+        <p className="max-md:hidden text-sm text-secondary line-clamp-2 mb-2">
           {product.description}
         </p>
       )}

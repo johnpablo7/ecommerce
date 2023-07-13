@@ -28,8 +28,6 @@ export default function Home() {
 
           {/* @ts-expect-error Async Server Component */}
           <RecomendedForYou />
-
-          {/* OTRAS PAGINAS */}
         </div>
       </div>
     </div>

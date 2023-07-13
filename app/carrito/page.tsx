@@ -12,6 +12,7 @@ export default async function CartPage() {
             <div className="col-start-1 col-end-4">
               <OrderList />
             </div>
+
             <div>
               <OrderSummary />
             </div>

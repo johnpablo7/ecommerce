@@ -29,6 +29,7 @@ export const Cart = () => {
               height={80}
             />
           </div>
+
           <div className="flex items-center gap-3 col-span-2">
             <div className="flex flex-col">
               <div className="font-roboto line-clamp-2">

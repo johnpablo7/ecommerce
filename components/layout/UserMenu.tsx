@@ -23,10 +23,7 @@ export const UserMenu = () => {
         </span>
       </Link>
 
-      <Link
-        href="/carrito"
-        className="hidden relative xl:flex flex-col items-center group"
-      >
+      <div className="hidden relative xl:flex flex-col items-center group cursor-pointer">
         <CiShoppingCart className="text-2xl xl:text-3xl" />
         <p className="text-xs">Carro</p>
         <span className="absolute bg-secondary text-white rounded-full text-[10px] py-[1px] px-[5px] -top-1 -right-1">
@@ -35,7 +32,7 @@ export const UserMenu = () => {
         <div className="absolute top-full right-0 hidden group-hover:block transition-all duration-500">
           <ShowCart />
         </div>
-      </Link>
+      </div>
 
       <div className="flex flex-col items-center cursor-pointer relative group">
         <CiUser className="text-2xl xl:text-3xl" />

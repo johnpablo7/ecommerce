@@ -10,12 +10,12 @@ export default function AccountLayout({
     <div className="px-4">
       <div className="max-w-container mx-auto">
         <HomeViewList />
-        <div className="grid grid-cols-1 xl:grid-cols-4 md:gap-6">
-          <div className="col-start-1 col-end-2">
+        <div className="grid grid-cols-1 xl:grid-cols-4 gap-2 md:gap-6">
+          <div className="md:col-start-1 md:col-end-2">
             <ManageAccount />
           </div>
 
-          <main className="col-start-2 col-end-5">{children}</main>
+          <main className="md:col-start-2 md:col-end-5">{children}</main>
         </div>
       </div>
     </div>

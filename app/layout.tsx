@@ -1,4 +1,4 @@
-import { getGlobal } from "@/api/directus";
+import { getCategories, getGlobal } from "@/api/directus";
 import { Logo } from "@/components/layout/Logo";
 import { SiteMenu } from "@/components/layout/SiteMenu";
 import { CategoriesButton } from "@/components/layout/CategoriesButton";
@@ -26,6 +26,8 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const categories = await getCategories();
+
   return (
     <html lang="es" className={clsx(poppins.variable, roboto.variable)}>
       <body className="font-poppins">
@@ -57,6 +59,7 @@ export default async function RootLayout({
             {/* Row 2 */}
             <div className="max-xl:hidden col-start-1 col-end-2 bg-primary text-white">
               <div className="xl:ml-container-side">
+                {/* @ts-expect-error Async Server Component */}
                 <CategoriesButton />
               </div>
             </div>
@@ -97,7 +100,7 @@ export default async function RootLayout({
 
             {/* Row 3 */}
             <div className="max-xl:sticky z-50 bottom-0 py-3 xl:hidden col-start-1 col-end-4 bg-white">
-              <MobileMenu />
+              <MobileMenu categories={categories} />
             </div>
           </div>
         </section>

@@ -1,4 +1,4 @@
-import { DefaultInformation } from "@/components/my-account/menu-information/DefaultInformation";
+import { DefaultInformation } from "@/components/my-account/menu-default/DefaultInformation";
 
 export default function MyAccount() {
   return (

@@ -1,6 +1,6 @@
-import { getCategories, getImageUrl } from "@/api/directus";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { getCategories, getImageUrl } from "@/api/directus";
 
 export const ShopByCategory = async () => {
   let categories = await getCategories();

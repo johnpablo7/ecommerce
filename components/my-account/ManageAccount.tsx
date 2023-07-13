@@ -1,24 +1,34 @@
 import Image from "next/image";
 import Link from "next/link";
-import { RiAccountBoxLine, RiGiftLine, RiHeartLine } from "react-icons/ri";
+import {
+  RiAccountBoxLine,
+  RiGiftLine,
+  RiHeartLine,
+  RiMenuFill,
+} from "react-icons/ri";
 import { MdOutlinePayment, MdOutlineClose } from "react-icons/md";
 
 export const ManageAccount = () => {
   return (
     <div className="flex flex-col gap-5 mb-10">
       <div className="p-2 border border-white shadow-slate-100 shadow-lg text-gray-600">
-        <div className="flex items-center gap-5">
-          <Image
-            src="/images/avatar.png"
-            alt="avatar"
-            width={50}
-            height={50}
-            className="border border-slate-200 rounded-full p-1"
-          />
-          <div className="flex flex-col">
-            <p>Hola,</p>
-            <p className="font-semibold">John Doe</p>
+        <div className="flex justify-between">
+          <div className="flex items-center gap-5">
+            <Image
+              src="/images/avatar.png"
+              alt="avatar"
+              width={50}
+              height={50}
+              className="border border-slate-200 rounded-full p-1"
+            />
+            <div className="flex flex-col">
+              <p>Hola,</p>
+              <p className="font-semibold">John Doe</p>
+            </div>
           </div>
+          <button className="md:hidden px-2 bg-white text-secondary border border-gray-300 text-xl rounded">
+            <RiMenuFill />
+          </button>
         </div>
       </div>
 

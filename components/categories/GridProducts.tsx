@@ -1,7 +1,6 @@
 import { getProducts } from "@/api/directus";
 import { TCategory } from "../../types/category";
 import { ProductCard } from "./shared-product/ProductCard";
-import { Defaultsorting } from "./shared-product/Defaultsorting";
 import { PaginationButtons } from "./shared-product/PaginationButtons";
 
 export const GridProducts = async ({ category }: { category: TCategory }) => {
@@ -10,10 +9,8 @@ export const GridProducts = async ({ category }: { category: TCategory }) => {
   products = products.filter((p) => p.category === category.id);
 
   return (
-    <div className="py-16">
-      <Defaultsorting />
-
-      <div className="grid grid-cols-3 gap-6">
+    <div className="pb-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {products.map((product) => (
           <ProductCard key={product.slug} product={product} />
           // className="" // si se quiere modificar los styles ponerlo dentro del ProductCard

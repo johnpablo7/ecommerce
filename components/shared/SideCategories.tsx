@@ -4,8 +4,12 @@ import { RiCloseLine } from "react-icons/ri";
 import { SlArrowDown } from "react-icons/sl";
 import clsx from "clsx";
 import { ShowCategoriesButton } from "./ShowCategoriesButton";
+import { FC } from "react";
+import { TCategory } from "@/types/category";
 
-export const SideCategories = () => {
+export const SideCategories: FC<{ categories: TCategory[] }> = ({
+  categories,
+}) => {
   const [showMobileCategories, setShowMobileCategories] =
     useAtom(mobileCategoriesAtom);
 
@@ -28,7 +32,7 @@ export const SideCategories = () => {
             className="text-2xl justify-end"
           />
         </div>
-        <ShowCategoriesButton />
+        <ShowCategoriesButton categories={categories} />
       </div>
     </div>
   );

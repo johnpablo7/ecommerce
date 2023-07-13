@@ -30,7 +30,7 @@ export const Banner = async () => {
         </p>
 
         <Link
-          href="/"
+          href="/categorias"
           className="bg-primary text-white hover:text-primary hover:bg-transparent border hover:border-primary rounded py-2 xl:py-3 px-6 transition"
         >
           COMPRA AHORA
